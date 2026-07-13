@@ -1,0 +1,130 @@
+baseURL: https://kimkaramhwi.github.io/ai-trend-news-github-blog/
+title: AI Trend News
+theme: PaperMod
+languageCode: ko
+defaultContentLanguage: ko
+hasCJKLanguage: true
+
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+buildFuture: false
+
+pagination:
+  pagerSize: 10
+
+minify:
+  disableXML: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  title: "AI Trend News"
+  description: "AI 업계 동향을 매일/매주 자동 수집·요약하는 큐레이션 블로그"
+  keywords: [AI, LLM, Anthropic, OpenAI, Agent, 뉴스, 큐레이션]
+  author: "Vivian (김가람휘)"
+  DateFormat: "2006-01-02"
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  TocOpen: false
+  UseHugoToc: true
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  hideFooter: false
+
+  homeInfoParams:
+    Title: "AI Trend News 👋"
+    Content: >
+      Anthropic·OpenAI·Google 공식 블로그, 에이전트/MCP 엔지니어링 블로그, Hacker News, arxiv,
+      GitHub Trending 등에서 AI 동향을 매일 자동 수집해 한글로 요약합니다.
+      매주 월요일엔 지난주 종합 요약도 올라와요.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/kimkaramhwi/ai-trend-news-github-blog"
+    - name: rss
+      url: "index.xml"
+
+  assets:
+    disableHLJS: false
+    favicon: "favicon.ico"
+
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: posts
+      name: 주간 종합
+      url: /posts/
+      weight: 10
+    - identifier: knowledge
+      name: 일간 픽
+      url: /knowledge/
+      weight: 20
+    - identifier: tags
+      name: 태그
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: 검색
+      url: /search/
+      weight: 40
+
+taxonomies:
+  tag: tags
+  category: categories
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
+
+privacy:
+  vimeo:
+    disabled: false
+    simple: true
+  x:
+    disabled: false
+    enableDNT: true
+    simple: true
+  instagram:
+    disabled: false
+    simple: true
+  youtube:
+    disabled: false
+    privacyEnhanced: true

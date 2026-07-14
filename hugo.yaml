@@ -8,7 +8,8 @@ hasCJKLanguage: true
 enableRobotsTXT: true
 enableGitInfo: true
 enableEmoji: true
-buildFuture: false
+buildFuture: true
+timeZone: Asia/Seoul
 
 pagination:
   pagerSize: 10
